@@ -34,7 +34,7 @@ git branch
   - 브랜치를 체크아웃한 상태에서 커밋을 수행하면 그 브랜치에 이력이 기록됨
 
 ```bash
-git checkout issue1
+git switch issue1
 ```
 
 ![](./asset/캡처.PNG)
@@ -46,7 +46,7 @@ git checkout issue1
   - checkout을 이용하여 브랜치를 master로 전환
 
 ```bash
-git checkout master
+git switch master
 git merge issue1
 ```
 
@@ -71,15 +71,15 @@ git branch issue3
 ![](asset/캡처3.PNG)
 
 ```bash
-git checkout issue2 -> 내용 추가 -> add -> commit
-git checkout issue3 -> 내용 추가 -> add -> commit
+git switch issue2 -> 내용 추가 -> add -> commit
+git switch issue3 -> 내용 추가 -> add -> commit
 ```
 
 ![](asset/캡처4.PNG)
 
 ```bash
 #'issue2' 브랜치에서 변경한 부분과 'issue3' 브랜치에서 변경한 부분을 모두 'master' 브랜치에 통합
-git checkout master
+git switch master
 git merge issue2
 ```
 
@@ -125,7 +125,7 @@ git reset --hard HEAD~
 
 ```bash
 #'issue3' 브랜치로 전환하여 'master' 브랜치에 rebase 를 실행
-git checkout issue3
+git switch issue3
 git rebase master-> 오류발생
 ```
 
@@ -156,7 +156,7 @@ git rebase --continue
 
 ```bash
 #'master' 브랜치로 전환 하여 'issue3' 브랜치의 변경 사항을 모두 병합
-git checkout master
+git switch master
 git merge issue3
 ```
 
